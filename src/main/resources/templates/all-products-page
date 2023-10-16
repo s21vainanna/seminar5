@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<body>
+		<table>
+			<tr th:each="temp : ${packet}">
+				<td th:text="${temp.getId()}"> </td>
+				<td th:text="${temp.getTitle()}"> </td>
+				<td th:text="${temp.getDescription()}"> </td>
+				<td th:text="${temp.getPrice()}+' eur'"> </td>
+				<td th:text="${temp.getQuantity()} + ' pcs'"></td>
+			</tr>
+		</table>
+	</body>
+</html>
